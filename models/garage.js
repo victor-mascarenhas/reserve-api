@@ -6,6 +6,12 @@ const GarageSchema = new Schema({
   rate_compact: { type: Number, required: true },
   rate_regular: { type: Number, required: true },
   rate_large: { type: Number, required: true },
+  spots: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "spot",
+    },
+  ],
 });
 
 module.exports = mongoose.model("garage", GarageSchema);

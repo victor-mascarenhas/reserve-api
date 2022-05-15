@@ -41,7 +41,7 @@ router.get("/:id", async (req, res, next) => {
 // @desc     create vehicle
 // @access   Public
 router.post(
-  "/",
+  "/register",
   [check("license", MSGS.LICENSE_VALIDATED).isLength({ min: 6 })],
   async (req, res) => {
     try {
