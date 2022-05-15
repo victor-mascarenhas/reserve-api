@@ -18,7 +18,6 @@ app.use("/user", require("./routes/api/user"));
 app.use("/vehicle", require("./routes/api/vehicle"));
 
 const server = app.listen(PORT, () => {
-  console.log("testing signature");
   console.log(`Listening on: ${PORT}`);
 });
 
